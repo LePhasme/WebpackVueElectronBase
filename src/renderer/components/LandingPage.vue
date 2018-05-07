@@ -17,6 +17,8 @@
             internal configurations, using the project structure, building your application,
             and so much more.
           </p>
+          <font-awesome-icon :icon="['fab', 'facebook']"/>
+          <a class="button is-large">plop</a>
           <button @click="open('https://simulatedgreg.gitbooks.io/electron-vue/content/')">Read the Docs</button><br><br>
         </div>
         <div class="doc">
@@ -31,10 +33,18 @@
 
 <script>
   import SystemInformation from './LandingPage/SystemInformation'
+  import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+  import fontawesome from '@fortawesome/fontawesome'
+  import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
+
+  fontawesome.library.add(faFacebook)
 
   export default {
     name: 'landing-page',
-    components: { SystemInformation },
+    components: {
+      SystemInformation,
+      FontAwesomeIcon
+    },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
