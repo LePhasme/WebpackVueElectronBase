@@ -90,6 +90,7 @@ let webConfig = {
         removeAttributeQuotes: true,
         removeComments: true
       },
+      isWebApp: true,
       nodeModules: false
     }),
     new webpack.DefinePlugin({
