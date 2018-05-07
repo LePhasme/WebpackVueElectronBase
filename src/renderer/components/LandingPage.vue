@@ -36,6 +36,7 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import fontawesome from '@fortawesome/fontawesome'
   import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
+  import { EventBus } from '../event-bus'
 
   fontawesome.library.add(faFacebook)
 
@@ -44,6 +45,11 @@
     components: {
       SystemInformation,
       FontAwesomeIcon
+    },
+    mounted () {
+      EventBus.$on('bus-event', () => {
+        // nop
+      })
     },
     methods: {
       open (link) {
