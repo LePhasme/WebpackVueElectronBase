@@ -1,0 +1,2 @@
+# WebpackVueElectronBase
+Project template
